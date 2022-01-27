@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Patrick Hand SC', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -14,11 +14,11 @@ textarea {
 }
 
 .jumbotron {
-  text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  margin-top: 0;
 }
 
 .description {
@@ -68,4 +68,16 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+/*Medium devices (tablets, 768px and up) */
+@media (min-width: 992px) { 
+  .time-block{ 
+    width: 100%;
+  }
+  .footer {
+    display: flex; 
+    justify-content: end;
+    flex-direction: column;
+  }
 }
