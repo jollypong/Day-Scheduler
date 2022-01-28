@@ -1,11 +1,4 @@
-// today displayed 
-//time blocks color coded to indicate past/present/future
-//save text in timeblock 
-//save to localStorage 
-//load localStorage to timeblock on refresh
-
 $(function(){ 
-
     //clock to display day 
     dayofWeek();
     function dayofWeek(){ 
@@ -38,7 +31,13 @@ $(function(){
    
     //load contetns on refresh from localStorage
     $(".8").siblings(".text").val(localStorage.getItem("8")); 
-        // console.log(localStorage.getItem("0800"));
-        // console.log(typeof(localStorage.getItem("0800")));
-        //could also do: $(".0800.textarea").val(localStorge.getItem("0800"));
+    $(".9").siblings(".text").val(localStorage.getItem("9")); 
+    $(".10").siblings(".text").val(localStorage.getItem("10")); 
+    $(".11").siblings(".text").val(localStorage.getItem("11")); 
+    $(".12").siblings(".text").val(localStorage.getItem("12")); 
+    $(".13").siblings(".text").val(localStorage.getItem("13")); 
+    $(".14").siblings(".text").val(localStorage.getItem("14")); 
+    $(".15").siblings(".text").val(localStorage.getItem("15"));
+    $(".16").siblings(".text").val(localStorage.getItem("16"));
+    $(".17").siblings(".text").val(localStorage.getItem("17")); 
 })
