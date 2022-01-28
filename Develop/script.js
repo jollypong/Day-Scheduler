@@ -4,7 +4,6 @@
 //save to localStorage 
 //load localStorage to timeblock on refresh
 
-
 $(function(){ 
 
     //clock to display day 
@@ -15,17 +14,18 @@ $(function(){
     }
 
     // function for color change
-    //use 0800 0900 to compare to hhhh value? didn't worok 
-    //resort to moment.hour and then split "hour" and compare to timeNow. 
-    let timeNow = moment().hour();
+    let timeNow = moment().hour(); //moment.hour to return the hour. 
+        console.log(timeNow)
     $(".time-block").each(function(){ 
-        let checkTime = parseInt($(this).attr("id").split("hour"))
-            if (checkTime < timeNow){ 
-                $(this).addClass("bg-dark, text-white, text-decoration-line-through")
+        let checkTime = parseInt($(this).attr("id").split("hour")); //
+            console.log(checkTime);
+            if (checkTime < timeNow){   //determine if time block is before clock or after. 
+                $(this).addClass("bg-secondary");
+                $(this).children(".text").addClass("text-decoration-line-through")
             }
-            else if (checkTime > timeNow){ 
-                $(this).addClass("bg-light")
-            }
+            else if (checkTime > timeNow){  //determine if time block is before clock or after. 
+                $(this).addClass("bg-info")
+            };
     });
 
     //save button will save to localStorage
@@ -37,11 +37,8 @@ $(function(){
     }
    
     //load contetns on refresh from localStorage
-    $(".0800").siblings(".text").val(localStorage.getItem("0800")); 
-        console.log(localStorage.getItem("0800"));
-        console.log(typeof(localStorage.getItem("0800")));
-
-    //could also do: $(".0800.textarea").val(localStorge.getItem("0800"));
+    $(".8").siblings(".text").val(localStorage.getItem("8")); 
+        // console.log(localStorage.getItem("0800"));
+        // console.log(typeof(localStorage.getItem("0800")));
+        //could also do: $(".0800.textarea").val(localStorge.getItem("0800"));
 })
-
-
