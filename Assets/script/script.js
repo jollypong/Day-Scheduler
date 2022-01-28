@@ -29,7 +29,7 @@ $(function(){
         localStorage.setItem(time,text);
     }
    
-    //load contetns on refresh from localStorage
+    //load contetns stay on refresh from localStorage
     $(".8").siblings(".text").val(localStorage.getItem("8")); 
     $(".9").siblings(".text").val(localStorage.getItem("9")); 
     $(".10").siblings(".text").val(localStorage.getItem("10")); 
@@ -40,4 +40,11 @@ $(function(){
     $(".15").siblings(".text").val(localStorage.getItem("15"));
     $(".16").siblings(".text").val(localStorage.getItem("16"));
     $(".17").siblings(".text").val(localStorage.getItem("17")); 
+
+    //button on click clear all events from textarea
+    $(".clearBtn").on("click", clearAll); 
+    function clearAll(){ 
+        window.localStorage.clear();
+        window.location.reload();
+    }
 })
